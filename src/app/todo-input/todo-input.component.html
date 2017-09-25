@@ -1,0 +1,8 @@
+<form novalidate (ngSubmit)="onSubmit()" fxLayout="row" fxLayoutAlign="center center">
+  <div fxLayout="row" fxLayoutAlign="center center" fxFlex="10">
+    <md-checkbox aria-label="Select All" class="checkbox" [checked]="state === 2" [indeterminate]="state === 1" (change)="toggleAll()">
+    </md-checkbox>
+  </div>
+  <input fxFlex="90" type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="new-todo" placeholder="What's your plan today ?" />
+  <button type="submit" hidden>Save</button>
+</form>

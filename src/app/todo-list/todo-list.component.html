@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Let's plan for today</h1>
+  <!-- Action control when user hover the element -->
+  <div class="control" *ngIf="checkAllState !== 0">
+    <button md-raised-button color="primary" aria-label="Clean selected Item" class="done" (click)="onClearSelected()">
+      <md-icon>remove</md-icon>
+    </button>
+    <button md-raised-button color="warn" aria-label="Deleted selected Item" class="delete" (click)="onRemove()">
+      <md-icon>clear</md-icon>
+    </button>
+  </div>
+  <!--/ Action control when user hover the element -->
+  <div class="page">
+    <!-- Input component -->
+    <todo-input [state]="checkAllState" (addTodoEE)="onAddTodo($event)" (selectAllEE)="onSelectAll($event)"></todo-input>
+    <!--/ Input component -->
+
+    <!-- list item component -->
+    <div class="todo-list" *ngIf="items">
+      <todo-item *ngFor="let item of items" [item]="item" (doneEE)="onDone($event)" (deleteEE)="onDelete($event)"
+        (checkEE)="onSelect($event)" (undoneEE)="onUndoneTask($event)"></todo-item>
+    </div>
+    <!--/ list item component -->
+  </div>
+</div>

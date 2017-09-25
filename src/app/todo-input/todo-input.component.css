@@ -1,0 +1,36 @@
+.new-todo {
+    padding: 16px !important;
+    border: none !important;
+    background: rgba(0, 0, 0, 0.003);
+    width: 100%;
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 1.4em;
+    outline: none;
+    color: inherit;
+    padding: 6px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+.new-todo::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: pink;
+}
+
+.new-todo::-moz-placeholder {
+    /* Firefox 19+ */
+    color: pink;
+}
+
+.new-todo:-ms-input-placeholder {
+    /* IE 10+ */
+    color: pink;
+}
+
+.new-todo:-moz-placeholder {
+    /* Firefox 18- */
+    color: pink;
+}

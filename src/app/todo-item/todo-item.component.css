@@ -1,0 +1,27 @@
+.item {
+    display: block;
+    position: relative;
+    word-break: break-all;
+    /* padding: 18px 15px 15px 15px; */
+    display: block;
+    line-height: 1.2em;
+    transition: color 0.4s;
+    font-size: 20px;
+    border-top: 1px solid #ededed;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #a0a0a0;
+    font-style: italic;
+}
+
+.control-action {
+    position: absolute;
+    right: 0;
+}
+
+.todo-item-name {
+    padding: 16px !important;
+    text-align: left!important;
+}

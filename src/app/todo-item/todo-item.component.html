@@ -1,0 +1,21 @@
+<div class="item" (mouseover)="onHoverIn()" (mouseleave)="onHoverOut()" fxLayout="row" fxLayoutAlign="center center">
+  <md-checkbox aria-label="Select All" fxFlex="10" [checked]="isChecked" (change)="onSelected($event)">
+  </md-checkbox>
+
+  <span fxFlex="90" [ngClass]="{'done': item.isDone}" class="todo-item-name">{{item.name}}</span>
+
+  <!-- Action control when user hover the element -->
+  <div class="control-action" *ngIf="isShowControl">
+    <button md-raised-button *ngIf="!item.isDone" color="primary" aria-label="Done" (click)="onDoneClick()">
+      <md-icon>done</md-icon>
+    </button>
+    <button md-raised-button *ngIf="item.isDone" color="primary" aria-label="Undo done task" (click)="onUndo()">
+      <md-icon>undo</md-icon>
+    </button>
+
+    <button md-raised-button color="warn" aria-label="Remove this item" (click)="onClearClick()">
+      <md-icon>clear</md-icon>
+    </button>
+  </div>
+  <!--/ Action control when user hover the element -->
+</div>
